@@ -1,0 +1,45 @@
+Conceptos: 
+1) for : Crea un bucle, una secuencia de instruciones que se ejecutará repetidas veces, consiste de tres expresiones, encerradas entre parentesis y separadas por puntos y comas, seguido de la sentecia ejecutada en el bucle.
+comienza con la palabra clave for:
+for(expresion-Inicio ; condicion ; expresion-fin){
+  sentencia
+}
+
+ejemplo almacenaremos las respuestas de los valores de la tabla de multiplicar del 1 al 12 en un array; array es como un contenedor donde podemos almacenar topos de datos y despues poder utilizarlos,
+
+var valores = [] <-- declaramos un array de numeros vacío
+
+/*pasamos el numero a multiplicar,el  bucle for inicia en 0 y la condición es que si i llega a 12 se detenga, y se incrementara de  1 en 1*/
+function multiplicar(numero){
+for( var i = 0 ; i <= 12 ; i++ ){   
+  var respuesta = i  *  numero  <-- el valor de  i multiplicado por 5 
+  valores = [...valores , respuesta ] <-- almacenamos todo lo que tiene valores y le agregamos la respuesta en cada ciclo
+}
+return valores <-- retorna [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+}
+multiplicar(5)
+
+2) `&&`, `||` :  lo operadores lógicos se utilizan con valores voleanos, por ejemplo el los consicionales nos devuelven un falor boleano 
+
+var edad = 5
+var ciudad = "Lima"
+var provincia = "Junin"
+if(edad < 18 && ciudad === "Lima"){
+  return "Se atendera en la zona niños Lima uvicado en ..." <-- retorna porque la condicion es AND en español y
+}
+else if(edad >= 18 || provincia === "Junin" ){
+  return "Usted se puede incribir en provincia" <-- retorna porque la condicion es OR en español ó
+}
+else{
+  return "No cumple los requisitos"
+}
+
+y por ultimo simbolo del operador NOT !, que va delante de un valor boleano negandolo ejemplo
+
+var verdad = true
+
+if(!verdad){
+  retun "Es vedadero" <-- no retorna esto porque a verdad le negamos con ! 
+}else{
+  retun "es falso" <-- retorna esto porque verda no cumplio con la condición por que lo negamos
+}
