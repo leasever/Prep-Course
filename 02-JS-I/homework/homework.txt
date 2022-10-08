@@ -1,0 +1,70 @@
+Conceptos:
+
+1) Variables: Es donde almacenaremos un valor inicial para utilizarlos mas adelante, comienza con la palabra clave var , seguido de un nombre asignado por nosotros, seguido de = , seguido de un valor y este dependerá si son números, de igualmanera podemos realizar operaciones matemáticas y este tomará la propiedad de Number, si son caracteres van entre comillas dobles o simples y tomara la propiedad String, si le asignamos los valores true o false tomará la propiedad Boolean.
+
+ejemplo de tipos de datos básico:
+
+var resultado = 1 + 6;  <-- el valor de resultado es 7 y es de tipo de dato Number.
+
+var  cadena = "Hola " + "amigo"; <-- el valor de resultado es Hola amigo y es de tipo de dato String.
+
+var verdadero = true; <-- el valor de verdadero es true y es de tipo Boolean.
+
+2) Strings: son cadena de caracteres que van entre comillas simples o dobles y también todo texto que va dentro de comillas dobles o simples.
+
+ejemplo: 
+var name = "Caramelo"; 
+var description = 'Esto es una descripción de un producto';
+
+3) Funciones: es similar a un procedimiento, un conjunto de instruciones que realizará una tarea o calcular un valor, tomará alguna entrada y debolverá una salida. 
+ Declarar una funcion, consta de la palabra clave function, seguida de:
+ -el nombre de la función.
+ -los parametros de la función, entre parentesis y separados por comas.
+ -las declaraciones o instruciones de Javascript que define la función, encerrado entre llaves { ... }
+
+function nombre(parametro1, ...Nparametros){
+  declaraciones o intrucciones
+}
+
+ejemplo:
+
+function saludar( name , lastName ){
+  var saludo = "Hola " + name + " " + lastName <- tipo de dato string
+  return   saludo <-- retona Hola Abraham Leandro
+}
+saludar("Abraham" , " Leandro") <-- enviamos los dos parametros con tipo de dato String a la funcion saludar
+
+function sumar(num1 , num2 ){
+  var resultado = num1 + num2 
+  return resultado  <-- 35
+}
+sumar( 10 , 25 ) <-- tipo de dato Number
+
+4) Declaraciones if: evalua si una expresion es verdadera, si es falsa deja que otra sentencia pueda ser ejecutada.
+ejemplo:
+/*declaramos dos valores*/
+var num1 = 25
+var num2 = 80
+
+/*primero comparamos si son iguales*/
+if(num1 === num2){
+  return "Son iguales" <-- falso no son iguales y no retornará
+}
+else if(num1 > num2){
+  return num1 <-- falso num2 es mayor y no retornará
+}
+else{
+  return num2 <-- si no cumplen las dos sentencias retorna num2 que es el mayor 
+}
+
+5)Valores booleanos (`true`, `false`): declaramos verdadero o falso  para poder evaluar cuando se pasa por una declaración.
+
+function evaluar(condicion){
+  var valor = condicion <-- almacenamos el valor boleano = false
+  if(valor){
+    return "Es verdadero" <-- no retorna porque if solo ejecuta true
+  }else{
+    return "Es falso" <-- retorna es falso
+  }
+}
+evaluar(false) <-- pasamos el parametro false
