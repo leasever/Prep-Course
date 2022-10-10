@@ -1,0 +1,44 @@
+Arrays:
+Los Arrays son como una lista, cuyo items podemos hacer operaciones y poder recorrerlos. Los elementos de un Array son variables, la longitud pueden cambiar y los datos se pueden almacenar de manera no continua.Los tipos de datos almacenados pueden ser distintos.
+
+Ejemplo:
+
+var frutas = [ "pera" , "melocoton" , "piña"]
+
+-podemos ver el numero de elementos de un array 
+
+array.length    <---- es 3
+
+-podemos acceder a un elemento mediante su indice
+
+var segundo = frutas[0]
+
+-al útimo elemento se accede restando la longitus de elementos ya que el indice comienza por 0
+
+var ultimo =  frutas[frutas.length  - 1 ] <--- piña
+
+-podemos recorrerlos los indices de un array con un for
+
+for(var i = 0; i < frutas.length; i++){
+  if(frutas.[i] === "piña"){
+    return "mi fruta favorita es la piña"
+  }else{
+    return "no se encrontró"
+  }
+}
+
+-podemos añadir al final de un array
+
+var nuevaFruta = frutas.push("mango") <-- resultado [ "pera" , "melocoton" , "piña" , "mango" ]
+
+-podemos eliminar el último elemento de un array
+
+var ultimo = frutas.pop() <--- resultado [ "pera" , "melocoton" , "piña" ]
+
+-podemos añadir al principio de un array
+
+var nuevoLongitud = frutas.unshift("manzana") <--- resultado [ "manzana" , "pera" , "melocoton" , "piña" ]
+
+-eliminar el primer elemento de un array
+
+var primero = frutas.shift() <--- resultado [ "pera" , "melocoton" , "piña" ]
