@@ -1,0 +1,66 @@
+Conceptos:
+
+1) Objetos: Los objetos son contenedorres, un objeto es una coleecion de propiedades y una propiedad es una asociasión de un nombre(clave) y  un valor. Un objeto es una entidad independiente con propiedades y tipos.
+ejemplo: Un plato es un objeto con propiedades. Un plato tiene un color, un diseño, un peso, un material del que está echo, etc.
+
+2) Propiedades: El valor de una propiedad puede ser una funcion, las propiedades de un objeto definen las caractieristicas del objeto, se accesde a la propiedad de un objeto con una simple notacion de puntos:
+ejemplo:
+nombreObjeto.nombrePropiedad
+
+const taza = {
+  color : "negro",
+  peso: 1
+}
+taza.color <---- "negro"
+
+3) Metodos: Un método es una propiedad de un objeto que es una funcion.
+ejemplo;
+var alumno = {
+  nombre: "Jose",
+  saludar: function(){
+    console.log("hola " + this.nombre)
+  }
+}
+
+alumno.saludar() <----- hola Jose
+
+4) Bucle `for…in`: Este bucle esta construido para iterar sobre las propiedades del objeto y registra una cadena de los nombre de propiedad y sus valores.
+ejemplo:
+
+var objeto = {
+  a: 522,
+  b: 88,
+  c: 755,
+  d: "hola"
+}
+
+for(const propiedad in objeto) {
+  console.log(`objeto.${propiedad} = ${objeto[propiedad]}`)
+}
+
+resultado:
+  objeto.a = 522
+  objeto.b = 88
+  objeto.c = 755
+  objeto.d = hola
+
+  5) Notación de puntos vs notación de corchetes : Son maneras de acceder a las propiedades de un objeto. para usuar la notación con corchetes se escribe el nombre del objeto seguido de [ ], dentro de los corchetes se escribe el nombre de la propiedad entre corchetes como un string. La notación con corchetes a diferencia de la notacion con puntos, puede utilizarse con variables:
+  ejemplo de notación con corchetes:
+   var mascota = {
+    nombre : "Layca",
+    amigos: ["Sasha", "Boby"]
+   }
+
+   console.log(mascota["nombre"]) <--- resultado Layca
+
+notacion con puntos tambien se utiliza para acceder a la propiedad de un objeto. 
+
+ejemplo: 
+
+const usuario = {
+  nombre: "Jose",
+  ocupacion: "Obrero",
+  pasatiempos: [ "Boley", "Ajedrez"]
+}
+
+console.log(usuario.ocupacion) <--- resultado Obrero
