@@ -1,0 +1,27 @@
+Conceptos:
+
+1) prototype: Todos los objetos en javascript tienen una referencia a otro objeto que es llamado su prototipo, cada objeto que creamos tiene sus propiedades ya a la vez tiene definido un proto.
+
+ejemplo:
+var lista = [ 1, 2, 3]
+
+lista.push() <-- vemos que push no está definido en lista porque el prototipo del objeto lista es un objeto que se llama array y array tiene muchas propiedades.
+
+2) constructor: los constructores nos sirven para compartir metodos osea funciones y para hacer el código mas escalable.
+
+->Creamos el constructor Persona
+function Persona(edad){
+  this.edad = edad;
+}
+->Creamos el constructor Persona
+Persona.prototype.getEdad = function(){
+  re
+}
+var objeto1 = new Persona(22);
+->el prototipo de objeto1 es Persona y tien una 
+Persona { 
+  getEdad: [Function]
+}
+objeto1.getEdad(); <-- nos da 22
+var objeto2 = new Persona(43);
+var objeto3 = new Persona(26);
