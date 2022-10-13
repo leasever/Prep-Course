@@ -1,0 +1,23 @@
+Definiciones
+
+1) Funciones Callback: Es una retrollamada o devolucion de llamada(Callback).
+
+Es una funcion ejecutable A que se usa como argumento en otra funcion B, de esta forma al llamar a la funcion B , esta ejecutará la funcion A.
+
+ejemplo:
+
+funtion calcular(numero1, numero2, callback){
+  return callback(numero1, numero2);
+}
+
+function calcularProducto(numero1, numero2){
+  return numero1 * numero2;
+}
+
+function calcularSuma(numero1, numero2){
+  return numero1 + numero2;
+}
+
+calcular(10 , 15 , calcularProducto); <-- El resultado es 150 porque pasamos los valores y espera un callback que es calcularProducto y se ejecuta la multiplicación
+
+calcular(10, 15 , calcularSuma); <-- El resultado es 25 porque pasamos los valores y espera un callback que es calcularSuma y se ejecuta la multiplicación
